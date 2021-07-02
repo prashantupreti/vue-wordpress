@@ -8,7 +8,8 @@
             <div class="mt-2"><a href="#" class="text-2xl font-bold text-gray-700 hover:underline">{{post.title.rendered}}</a>
                 <p class="mt-2 text-gray-600" v-html="post.excerpt.rendered"></p>
             </div>
-            <div class="flex items-center justify-between mt-4"><router-link :to="'/blog/'+getYear(post.date)+'/'+getMonth(post.date)+'/'+getDay(post.date)+'/'+post.slug" class="text-blue-500 hover:underline">Read more</router-link>
+            <!-- getYear(post.date)+'/'+getMonth(post.date)+'/'+getDay(post.date)+ -->
+            <div class="flex items-center justify-between mt-4"><router-link :to="{name: 'Post', params: {slug: post.slug, id:post.id}}" class="text-blue-500 hover:underline">Read more</router-link>
             </div>
         </div>
     </div>
